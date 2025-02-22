@@ -5,7 +5,6 @@ const salt = bcryptjs.genSaltSync(10);
 
 export const Register = async (req, res) => {
   const { name, email, password,role,profilePic } = req.body;
-    console.log(name, email, password);
   if (!name && !email && !password && !role && !profilePic) {
     res.status(422).json({ message: "fields cannot be emplty" });
   }
