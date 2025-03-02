@@ -7,6 +7,8 @@ const QuestionSchema = new mongoose.Schema({
   options: [{ type: String }], // Multiple choice options
   correctAnswers: [{ type: String, required: true }], // Array for multiple correct answers
   marks: { type: Number, required: true },
+},{
+    timestamps:true,
 });
 
 // Creating Question model

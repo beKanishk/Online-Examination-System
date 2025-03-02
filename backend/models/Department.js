@@ -9,6 +9,8 @@ const departmentschema=new mongoose.Schema({
     //SCORE,SCOPE,SAS
     courses: [{ type: mongoose.Schema.Types.ObjectId, ref: "Course" }]
 
+},{
+    timestamps:true,
 })
 
 const Department = mongoose.model("Department",departmentschema);
