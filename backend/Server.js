@@ -3,13 +3,17 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv';
 import cors from 'cors';
 import loginRouter from "./routers/loginRouter.js";
+import deptRouter from "./routers/DepartmentRouter.js";
+import courseRouter from "./routers/CourseRouter.js";
 dotenv.config();
 const app = express();
 const port = 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use("/userLogin",loginRouter)
+app.use("/userLogin",loginRouter);
+app.use("/department",deptRouter);
+app.use("/course",courseRouter);
 
 app.get("/", (req, res) => {
   res.send("hello, world!");
