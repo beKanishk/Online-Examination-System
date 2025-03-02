@@ -1,4 +1,4 @@
-import User from "../models/User.js";
+import User from "../models/Student.js";
 import bcryptjs from "bcryptjs";
 
 const salt = bcryptjs.genSaltSync(10);

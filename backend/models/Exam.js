@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+
 
 const ExamSchema = new mongoose.Schema({
     title: { type: String, required: true },
