@@ -1,9 +1,9 @@
 import bcrypt from "bcryptjs";
 
-import Teacher from "../models/Teacher";
+import Teacher from "../models/Teacher.js";
 
-const salt = bcryptjs.genSaltSync(10);
-export const registerTeacher = async (req, res) => {
+const salt = bcrypt.genSaltSync(10);
+export const register = async (req, res) => {
   const { name, email, password, department, coursesTaught, profilePicture } =
     req.body;
 
