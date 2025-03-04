@@ -45,7 +45,7 @@ export const login = async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-  const comparePass = bcrypt.compareSync(password, user.password);
+  const comparePass = bcrypt.compareSync(password, teacher.password);
   const success = false;
   if (!comparePass) {
     res.status(400).json({ success, message: "invalid password" });

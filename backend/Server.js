@@ -5,6 +5,7 @@ import cors from 'cors';
 import loginRouter from "./routers/loginRouter.js";
 import deptRouter from "./routers/DepartmentRouter.js";
 import courseRouter from "./routers/CourseRouter.js";
+import TeacherRouter from "./routers/TeacherRouter.js";
 dotenv.config();
 const app = express();
 const port = 3000;
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use("/userLogin",loginRouter);
 app.use("/department",deptRouter);
 app.use("/course",courseRouter);
+app.use("/teacher",TeacherRouter);
 
 app.get("/", (req, res) => {
   res.send("hello, world!");
