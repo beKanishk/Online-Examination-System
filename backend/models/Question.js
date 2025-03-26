@@ -2,16 +2,20 @@ import mongoose from "mongoose";
 
 const QuestionSchema = new mongoose.Schema(
   {
-    // examId: {
-    //   type: mongoose.Schema.Types.ObjectId,
-    //   ref: "Exam",
-    //   required: true,
-    // },
-    type: { type: String, required: true }, // MCQ, True/False, Descriptive
     questionText: { type: String, required: true },
-    options: [{ type: String }], // Multiple choice options
-    correctAnswers: { type: String, required: true }, // Array for multiple correct answers
-    marks: { type: Number, required: true },
+    options: [{ type: String }], // For MCQs
+    correctAnswer: { type: String },
+    type: {
+      type: String,
+      enum: ["MCQ", "True/False", "Descriptive", "Coding"],
+      required: true,
+    },
+    subject: { type: String, required: true }, // Example: 'DBMS', 'Operating System'
+    difficulty: {
+      type: String,
+      enum: ["Easy", "Medium", "Hard"],
+      required: true,
+    },
   },
   {
     timestamps: true,
