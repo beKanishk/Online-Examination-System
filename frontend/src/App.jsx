@@ -7,6 +7,7 @@ import {
 
 import User from "./components/User.jsx";
 import Exams from "./components/Exams.jsx";
+import QuestionPage from "./components/QuestionPage.jsx";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       <Routes>
         <Route path="/login" element={<User />} />
         <Route path="/exams" element={<Exams />} />
+        <Route path="/questions" element={<QuestionPage />} />
+      
       </Routes>
     </BrowserRouter>
   );
