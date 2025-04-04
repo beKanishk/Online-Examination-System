@@ -24,3 +24,11 @@ export const addDepartment = async (req, res) => {
     res.status(500).json({ message: "error occured", err });
   }
 };
+export const getAllDept = async (req, res) => {
+  try {
+    const dept = await Department.find().populate('courses');
+    res.status(200).json(dept);
+  } catch (err) {
+    res.status(500).json({ message: 'Error retrieving department', error: err.message });
+  }
+}

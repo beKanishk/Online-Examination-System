@@ -1,0 +1,138 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f3f4f6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Registration Container */
+  .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Form Styling */
+  .register-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    width: 400px;
+    text-align: center;
+  }
+  
+  /* Title */
+  .register-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  .register-input {
+    width: 100%;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 10px;
+  }
+  
+  .register-input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Course Selection */
+  .course-selection {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .course-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .course-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .course-option input {
+    margin-right: 5px;
+  }
+  
+  /* Profile Upload */
+  .profile-upload {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .profile-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .profile-upload input {
+    margin-bottom: 10px;
+  }
+  
+  .profile-preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 5px;
+  }
+  
+  /* Buttons */
+  .register-button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .register-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Login Link */
+  .login-text {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  
+  .login-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
+  .login-button:hover {
+    text-decoration: underline;
+  }
+  
+
+

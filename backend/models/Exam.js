@@ -10,31 +10,35 @@ const ExamSchema = new mongoose.Schema(
       ref: "Teacher",
       required: true,
     },
-    department: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Department",
-      required: true,
-    },
-    course: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Course",
-      required: true,
-    },
+    // department: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   ref: "Department",
+    //   required: true,
+    // },
+    // course: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   ref: "Course",
+    //   required: true,
+    // },
     questions: [{ type: mongoose.Schema.Types.ObjectId, ref: "Question" }],
     duration: { type: Number, required: true }, // In minutes
     totalMarks: { type: Number, required: true },
     gradingScheme: { type: String },
     scheduledDate: { type: Date, required: true }, // Exam Date
+    status: {
+      type: String,
+      enum: ["Draft", "Published", "Completed"],
+      default: "Draft", // New field to manage state
+    },
   },
   {
     timestamps: true,
   }
 );
 
-// Creating Exam model
-const Exam = mongoose.model("Exam", ExamSchema);
+const Exam = mongoose.model('Exam', ExamSchema);
+export default Exam;
 
-module.exports = Exam;
 
 //token
 // const jwt = require("jsonwebtoken");

@@ -1,11 +1,11 @@
-import Questions from "../models/Questions.js";
-const Question = require("../models/Question");
+import Question from "../models/Question.js";
 
-export const addQuestion = async (req, res) => {
-  const { type, questionText, options, correctAnswer, subject, difficulty } =
+
+export  const addQuestion = async (req, res) => {
+  const { questionText, options, correctAnswer, subject, difficulty } =
     req.body;
 
-  if (!type || !questionText || !correctAnswer || !subject || !difficulty) {
+  if ( !questionText || !correctAnswer || !subject || !difficulty) {
     return res.status(422).json({ message: "All fields are required" });
   }
 
@@ -16,7 +16,6 @@ export const addQuestion = async (req, res) => {
     }
 
     let newQuestion = new Question({
-      type,
       questionText,
       options: options || [],
       correctAnswer,

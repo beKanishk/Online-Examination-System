@@ -33,3 +33,13 @@ export const addCourse = async (req, res) => {
     res.status(500).json({ message: "error occured", err });
   }
 };
+
+export const getAllCourses = async (req, res) => {
+  try {
+    const courses = await Course.find().populate('department');
+    // const courses = await Course.find();
+    res.status(200).json(courses);
+  } catch (err) {
+    res.status(500).json({ message: 'Error retrieving courses', error: err.message });
+  }
+};
